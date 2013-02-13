@@ -1,0 +1,443 @@
+/*!
+ * Bootstrap v2.0.3
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+// CSS Reset
+@import "bootstrap/css/less/reset.less";
+
+// Core variables and mixins
+@import "bootstrap/css/less/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "bootstrap/css/less/mixins.less";
+
+// Grid system and page structure
+@import "bootstrap/css/less/scaffolding.less";
+@import "bootstrap/css/less/grid.less";
+@import "bootstrap/css/less/layouts.less";
+
+// Base CSS
+@import "bootstrap/css/less/type.less";
+@import "bootstrap/css/less/code.less";
+@import "bootstrap/css/less/forms.less";
+@import "bootstrap/css/less/tables.less";
+
+// Components: common
+@import "bootstrap/css/less/sprites.less";
+@import "bootstrap/css/less/dropdowns.less";
+@import "bootstrap/css/less/wells.less";
+@import "bootstrap/css/less/component-animations.less";
+@import "bootstrap/css/less/close.less";
+
+// Components: Buttons & Alerts
+@import "bootstrap/css/less/buttons.less";
+@import "bootstrap/css/less/button-groups.less";
+@import "bootstrap/css/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "bootstrap/css/less/navs.less";
+@import "bootstrap/css/less/navbar.less";
+@import "bootstrap/css/less/breadcrumbs.less";
+@import "bootstrap/css/less/pagination.less";
+@import "bootstrap/css/less/pager.less";
+
+// Components: Popovers
+@import "bootstrap/css/less/modals.less";
+@import "bootstrap/css/less/tooltip.less";
+@import "bootstrap/css/less/popovers.less";
+
+// Components: Misc
+@import "bootstrap/css/less/thumbnails.less";
+@import "bootstrap/css/less/labels-badges.less";
+@import "bootstrap/css/less/progress-bars.less";
+@import "bootstrap/css/less/accordion.less";
+@import "bootstrap/css/less/carousel.less";
+@import "bootstrap/css/less/hero-unit.less";
+
+// Utility classes
+@import "bootstrap/css/less/utilities.less"; // Has to be last to override when necessary
+
+// Responsive class
+@import "bootstrap/css/less/responsive.less";
+
+body{
+	background:#000;
+	color:#fff;
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+/*HEADER*/
+
+.header{
+	line-height:70px;
+	height:70px;
+	color:#fff;
+	font-size:48px;
+	font-family:'Oxygen';
+	background:url('img/bg_header.png');
+}
+
+.ie .header{
+	background:none;
+}
+
+.header .blueteam{
+	#gradient > .horizontal( rgba(0,0,144,0.6), rgba(0,0,0,0) );
+}
+
+.ie .header .blueteam{
+	#gradient > .horizontal( #000088, #000000 );
+}
+
+.header .redteam{
+	#gradient > .horizontal( rgba(0,0,0,0), rgba(144,0,0,0.6) );
+	background-color:transparent;
+	text-align:right;
+}
+
+.ie .header .redteam{
+	#gradient > .horizontal( #000000, #880000 );
+}
+
+.header .left, .header .right{
+	width:70px;
+	text-align:center;
+}
+
+.title{
+	text-align:center;
+}
+
+#twitchPlayer{
+	width:100%;
+}
+
+/*TEAM STATS*/
+
+.teamStats{
+	//background:url("img/bg_hexagon.png") center center;
+	#gradient > .vertical(#111, #000);
+	font-family:'Oxygen';
+}
+
+.teamStats .span6{
+	margin:0;
+	width:50%;
+	padding:10px;
+}
+
+.teamStats .blueteam{
+	#gradient > .horizontal( rgba(0,0,0,0), rgba(0,0,144,0.6) );
+	background-color:transparent;
+}
+
+.ie .teamStats .blueteam{
+	#gradient > .horizontal( #000, #008 );
+}
+
+.teamStats .redteam{
+	#gradient > .horizontal( rgba(144,0,0,0.6), rgba(0,0,0,0) );
+	background-color:transparent;
+}
+
+.ie .teamStats .redteam{
+	#gradient > .horizontal( #800, #000 );
+}
+
+.statsTable{
+	color:#fff;
+	width:100%;
+	text-align:center;
+}
+
+.playeravatar{
+	width:36px;
+}
+
+.playeravatar img{
+	width:36px;
+}
+
+.playername{
+	text-align:left;
+	padding-left:5px;
+}
+
+.playeritems{
+	//white-space: nowrap;
+	width:85px;
+}
+
+.playeritems br{
+	clear:both;
+}
+
+.playeritems a{
+	text-decoration:none;
+	float:left;
+	display:block;
+}
+
+.playeritems img{
+	margin:1px;
+}
+
+.playeritems img *{
+	float:none;
+}
+
+/*footer*/
+
+.navbar-fixed-bottom.options{
+	height:20px !important;
+	line-height:20px;
+	font-size:10px;
+	background:#000;
+}
+
+.navbar-fixed-bottom.options .navbar-inner{
+	padding:0 10px;
+	background:#000;
+}
+
+.navbar-fixed-bottom.options .nav > li > a{
+	padding:0;
+	color:#fff;
+}
+
+
+.navbar-fixed-bottom.options a{
+	color:#fff;
+}
+
+/*popover*/
+
+.popover-title{
+	background:#333;
+}
+
+.popover-content{
+	background:#111;
+}
+
+.popover-content .yellow{
+	color:yellow;
+}
+
+.popover{
+	background:transparent;
+	text-align:left !important;
+}
+
+.popover.top .arrow::after{
+	border-top-color: #222;
+}
+
+/*GRAPHICS*/
+
+#graphsspace{
+	#gradient > .vertical(#111, #000);
+}
+
+/*Jungle*/
+
+.jungleinfo, .twitterinfo{
+	//background:url('img/bg_hexagon.png');
+	#gradient > .vertical(#111, #000);
+	padding:20px;
+	font-family:'Oxygen';
+}
+
+.sectiontitle{
+	font-size:32px;
+	font-weight:bold;
+	color:#fff;
+	line-height:36px;
+	text-align:center;
+}
+
+.jungleinfo table{
+	width:100%;
+}
+
+.jungleinfo table td{
+	height:40px;
+	vertical-align:middle;
+	text-align:center;
+	font-size:24px;
+}
+
+.monstericon{
+	min-width: 20%;
+	width: 110px;
+}
+
+.red{
+	border:#800 3px solid;
+}
+
+.blue{
+	border:#008 3px solid;
+}
+
+.baron{
+	background:url('img/jungle/baron.png') center -20px no-repeat;
+}
+
+.dragon{
+	background:url('img/jungle/dragon.png') center -20px no-repeat;
+}
+
+.ancientgolem{
+	background:url('img/jungle/ancientgolem.png') center -20px no-repeat;
+}
+
+.lizards{
+	background:url('img/jungle/lizard.png') center -48px no-repeat;
+}
+
+.biggolem{
+	background:url('img/jungle/biggolem.png') center -20px no-repeat;
+}
+
+.wraiths{
+	background:url('img/jungle/wraith.png') center -47px no-repeat;
+}
+
+.wolves{
+	background:url('img/jungle/wolf.png') center -20px no-repeat;
+}
+
+/*Modal*/
+
+.modal{
+	width:1000px !important;
+}
+
+.modal-header{
+	background:#111;
+}
+
+.modal-body{
+	#gradient > .vertical(#222,#000);
+    max-height: 700px !important;
+}
+
+.modal-footer{
+	background:#111;
+}
+
+#story img{
+	float:left;
+	width:300px;
+}
+
+.generalPresChar{
+	width:100%;
+}
+
+.center{
+	text-align:center;
+	margin-bottom:10px;
+}
+
+.charStats{
+	width:100%;
+}
+
+/*bars*/
+.progress {
+	background:none !important;
+}
+
+.progress-ad .bar{
+	#gradient > .vertical(#5c1f1f, #4d0a0a)
+}
+
+.progress-def .bar{
+	#gradient > .vertical(#163a16, #002801)
+}
+
+.progress-ap .bar{
+	#gradient > .vertical(#1b3556, #062347)
+}
+
+.progress-diff .bar{
+	#gradient > .vertical(#411a52, #300542)
+}
+
+.ability{
+	text-align:left;
+	margin-bottom:15px;
+}
+
+.ability td{
+	vertical-align:top;
+}
+
+.abilityimage{
+	width:74px;
+}
+
+.abilityimage img{
+	padding-right:10px;
+}
+
+.abilitystats{
+	width:33%;
+	margin-left:10px;
+}
+
+.ap{color:#97fc97;}
+
+.ability th{
+	font-size:24px;
+}
+
+.ability th span{
+	font-size:12px;
+}
+
+.twitterinfo .bar{
+	float:left;
+	border:0;
+}
+
+.twitterinfo .progress{
+	margin:10px 0;
+}
+
+.twitterinfo .bar.blue{
+	#gradient > .vertical(#000099, #000044);
+}
+
+.twitterinfo .bar.red{
+	#gradient > .vertical(#990000, #440000);
+}
+
+.tweet_list{
+	margin:0;
+	list-style:none;
+}
+
+.tweet_list li{
+	padding:10px 0 10px 0;
+	clear:both;
+}
+
+.tweet_list li a.tweet_avatar{
+	margin-right:10px;
+	display:block;
+	float:left;
+}
