@@ -8,4 +8,4 @@ http://fredericpilon.com/LoLBattleStation/
 
 ## If you have any ideas or comments about this project:
 
-http://na.leagueoflegends.com/board/showthread.php?t=3119936
+http://na.leagueoflegends.com/board/showthread.php?t=3119936 or http://na.leagueoflegends.com/board/showthread.php?t=3122430
